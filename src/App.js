@@ -9,6 +9,8 @@ import Projects from "./projects";
 import Play from "./play"
 import Contact from "./contact";
 import Header from "./assets/carleeheader1.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 
 class App extends Component {
   render() {
@@ -64,7 +66,7 @@ class Footer extends Component {
     return (
       <section>
       <div class="footer has-background-light">
-      <span class="icon has-text-dark"><i class="fab fa-instagram"></i></span>
+      <span class="icon has-text-info"><FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon></span>
       </div>
       </section>
     );
