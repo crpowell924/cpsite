@@ -1,0 +1,14 @@
+{
+    "Home":
+    {
+        "title":"Home",
+        "p1":"I’m Carlee. Some of my friends call me Chaz or CP. I’m a recent 2020 graduate of the University of North Carolina at Chapel Hill with a B.A. in both Computer Science and Economics. I really, REALLY like coding — and I like to think my Economics degree often helps me weigh the marginal cost of that one extra slice of pizza.",
+        "p2":"Like I said, I love coding. I have experience in mobile and web applications, creating APIs, and a few areas of AWS. One time, my team and I even worked with a little robot. Honestly though, I’m just hungry and excited to keep getting my hands dirty with new work.",
+        "p3":"Take some time. Click around. Get to know me and my work, and let me know what you think. Please— I am just a poor enneagram 3 without enough to achieve.",
+        "p4":"(P.S. This portfolio website was really just an excuse for me to build something with React. How’d I do?)"
+    },
+    "Projects":
+    {
+        "title":"Projects"
+    }
+}
