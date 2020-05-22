@@ -64,9 +64,9 @@ class Content extends Component {
 class Footer extends Component {
   render () {
     return (
-      <section>
+      <section class="has-text-centered">
       <div class="footer has-background-light">
-      <span class="icon has-text-info"><FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon></span>
+      <span class="icon is-large"><FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon></span>
       </div>
       </section>
     );
