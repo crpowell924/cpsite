@@ -9,8 +9,7 @@ import Projects from "./projects";
 import Play from "./play"
 import Contact from "./contact";
 import Header from "./assets/carleeheader1.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCameraRetro } from '@fortawesome/free-solid-svg-icons'
+import Footer from "./footer"
 
 class App extends Component {
   render() {
@@ -61,16 +60,5 @@ class Content extends Component {
   }
 }
 
-class Footer extends Component {
-  render () {
-    return (
-      <section class="has-text-centered">
-      <div class="footer has-background-light">
-      <span class="icon is-large"><FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon></span>
-      </div>
-      </section>
-    );
-  }
-}
 
 export default App;
