@@ -715,7 +715,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   background-color: #00d1b2 !important; }
 
 .has-text-link {
-  color: #3273dc !important; }
+  color: #c371e9 !important; }
 
 a.has-text-link:hover, a.has-text-link:focus {
   color: #205bbc !important; }
@@ -5330,9 +5330,9 @@ label.panel-block {
       color: #363636; }
   .tabs li {
     display: block; }
-    .tabs li.is-active a {
+    .tabs li.is-active a {  /* todo */
       border-bottom-color: #3273dc;
-      color: #3273dc; }
+      color: #c371e9; }
   .tabs ul {
     align-items: center;
     border-bottom-color: #dbdbdb;

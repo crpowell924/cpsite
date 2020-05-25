@@ -10,18 +10,33 @@
     [
         {
             "image":"/Users/crpowell/cpsite/src/assets/BlockXSC.png",
-            "title":"BlockX Coding",
-            "caption":"iPad app which allows visually impaired students to program a robot."
+            "title":"BlockX",
+            "caption":"iPad app which allows visually impaired students to program the Sphero robot.",
+            "path":"blockx",
+            "content":[
+                "This application was requested by a client who works closely with visually impaired students. She wanted an app that could be used by these students in order to write a list of commands to move the beloved Sphero robot through a maze. This way, they can learn some basic concepts of coding, like creating an executable script. Oh, by the way, Sphero is a physical robot. Here’s Sphero:",
+                "While there were other Sphero controller apps on the market, none of them supported the necessary accessibility functions for them to be usable for our target audience: students with visual impairments. These students use VoiceOver (available as a feature on all iOS devices) in order to interact with their technology, and without a bit of attention from the software developers on each individual app, the feature is all but useless. So my team got to work.",
+                "Some of our major obstacles included:",
+                "Working with hardware (duh!)",
+                "Learning a new Swift framework (SwiftUI) which included drag-and-drop",
+                "Working with apple accessibility features with little-to-no documentation",
+                "The internet has everything. We found most of what we needed for a Bluetooth Low Energy (BLE) connected controller of our Sphero, written in Swift. After some tinkering and translating units, our backend was mostly settled. The Sphero could be controlled from our Swift script, including turning 360 degrees, moving forward by any number of meters, and even changing the color of an LED light on the robot. However, I can’t understate the amount of dedicated research one of my teammates put in to discover this controller.",
+                "While I had written an entire app in Swift before, I ended up having to basically re-learn the language. My previous experience with Swift’s UIKit programmatic framework actually didn’t translate much into using the recently-released (at the time) SwiftUI framework. Thankfully, the latter was easier to learn than the former, and I always love an excuse to learn something new. But, this did present a learning curve I hadn’t expected when we took on the project. Once we got through this learning curve (thanks, YouTube tutorials!), we had a lovely drag-and-drop interface for the robot command script.",
+                "Apple’s accessibility features have limits. While there was plenty of documentation and tutorials for the UIKit accessibility features, the tutorials for SwiftUI were still just slowly hitting the internet this spring— and sadly, accessibility is often not as high on developers’ priority lists as it should be. So, using the sparse (and sometimes nonexistent) Apple documentation did not get us to a satisfactory point with our application. Our solution was to implement some auditory feedback for users separate from VoiceOver. If you watch the below video, you’ll hear a “ding” sound as I drag the command blocks into the drop area to add them to the script. It lets the user know that they are hovering over the correct area, and if they drop a block, it will get added to the script. This, along with a lot of VoiceOver features not shown, made an app that could feasibly be used by a visually impaired student with no instructor assistance.",
+                "As may be obvious, this app isn’t in a full deployment stage, but hey, it was a capstone project during a pandemic, okay? In reality, our client had expected it to be a two-semester project, so (thanks to some future team of UNC students) I’m looking forward to seeing it hit the App store sometime this fall."
+            ]
         },
         {
             "image":"/Users/crpowell/cpsite/src/assets/buddyup.png",
             "title":"BuddyUp",
-            "caption":"Web app that allows groups of friends to save money for trips together."
+            "caption":"Web app that allows groups of friends to save money for trips together.",
+            "path":"buddyup"
         },
         {
             "image":"/Users/crpowell/cpsite/src/assets/buddyup.png",
-            "title":"Facial Recognition",
-            "caption":"Facial recognition app for a hotel and fast food chain."
+            "title":"Elevate",
+            "caption":"Facial recognition app for a hotel and fast food chain.",
+            "path":"elevate"
         } 
     ],
     "Footer":

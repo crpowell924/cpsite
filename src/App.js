@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   Route,
   NavLink,
-  HashRouter
+  BrowserRouter as Router
 } from "react-router-dom";
 import Home from './home'
 import Projects from "./projects";
@@ -14,6 +14,7 @@ import Footer from "./footer"
 class App extends Component {
   render() {
     return(
+      <Router>
       <div class="container has-background-light">
       <section class="has-text-centered">
       <figure class="image">
@@ -24,6 +25,7 @@ class App extends Component {
       <Content></Content>
       <Footer></Footer>
       </div>
+      </Router>
       );
   }
 }
@@ -31,34 +33,65 @@ class App extends Component {
 class Navigation extends Component {
   render () {
     return(
-      <HashRouter>
-        <div class="tabs is-boxed is-centered">
+        <div className="tabs is-boxed is-centered">
         <ul className="header">
             <li><NavLink to="/">home</NavLink></li>
             <li><NavLink to="/projects">work</NavLink></li>
             <li><NavLink to="/play">play</NavLink></li>
             <li><NavLink to="/contact">contact</NavLink></li>
         </ul>
-        </div>
-      </HashRouter>
+        </div> 
     );
   }
 }
 
+
+
 class Content extends Component {
   render () {
     return (
-      <HashRouter>
       <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/play" component={Play}/>
             <Route path="/contact" component={Contact}/>
       </div>
-      </HashRouter>
     )
   }
 }
 
 
+
 export default App;
+
+
+
+
+
+
+
+// class Tab extends Component {
+//   constructor (props) {
+//     super(props);
+//     this.state = {
+//       isActive: false,
+//     }
+//   }
+
+//   handleClick = () => {
+//     console.log("click")
+//     this.setState({
+//         isActive: true
+//       });
+//   }
+
+//   render() {
+//     return (
+//       <li onClick={() => this.handleClick()}
+//       className= {this.isActive ? "is-active" : "no"}
+//       >
+//         <NavLink to={this.props.value}>work</NavLink>
+//       </li>
+//     );
+//   }
+// }
