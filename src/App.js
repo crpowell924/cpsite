@@ -15,10 +15,10 @@ class App extends Component {
   render() {
     return(
       <Router>
-      <div class="container has-background-light">
-      <section class="has-text-centered">
-      <figure class="image">
-        <img src={Header}></img>
+      <div className="container has-background-light">
+      <section className="has-text-centered">
+      <figure className="image">
+        <img src={Header} alt="Carlee Powell"></img>
       </figure>
       <Navigation></Navigation>
       </section>

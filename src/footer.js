@@ -3,11 +3,6 @@ import Twitter from "./assets/twitter.png"
 import Insta from "./assets/insta.png"
 import Linkedin from "./assets/linkedin.png"
 import data from "./data.json"
-import {
-    Route,
-    NavLink,
-    HashRouter
-  } from "react-router-dom";
 
 
 class Footer extends Component {
@@ -18,8 +13,8 @@ class Footer extends Component {
     }
     render () {
       return (
-        <section class="has-text-centered">
-        <div class="footer has-background-light">
+        <section className="has-text-centered">
+        <div className="footer has-background-light">
             {this.renderIcon(Insta, data.Footer.urls.insta)}
             <span>     </span>
             {this.renderIcon(Twitter, data.Footer.urls.twitter)}
@@ -34,9 +29,9 @@ class Footer extends Component {
 function Icon(props) {
     return (
             <a href={props.url}>
-            <span class="icon is-large">
-            <figure class="image is-96x96">
-            <img src={props.platform}></img>
+            <span className="icon is-large">
+            <figure className="image is-96x96">
+            <img src={props.platform} alt="Social Media"></img>
             </figure>
             </span>
             </a>

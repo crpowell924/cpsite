@@ -15,8 +15,8 @@ class Projects extends Component {
 
   render() {
     return (
-      <div class="section">
-        <h1 class="title has-text-centered">
+      <div className="section">
+        <h1 className="title has-text-centered">
           PROJECTS
         </h1>
         <Tiles></Tiles>
@@ -29,12 +29,12 @@ class Projects extends Component {
 class Tiles extends Component {
   renderTile(i) {
     return(
-      <div class="tile is-parent is-4">
+      <div className="tile is-parent is-4">
         <NavLink to={"/projects/" + pdata[i].path}>
-        <article class="tile is-child box ">
-          <p class="subtitle is-4 has-text-centered ">{pdata[i].title}</p>
-          <img class="image" src={images[i]}></img>
-          <p class="subtitle is-6"><br></br>{pdata[i].caption}</p>
+        <article className="tile is-child box ">
+          <p className="subtitle is-4 has-text-centered ">{pdata[i].title}</p>
+          <img className="image" src={images[i]} alt={pdata[i].title}></img>
+          <p className="subtitle is-6"><br></br>{pdata[i].caption}</p>
         </article>
         </NavLink>
       </div>
@@ -42,7 +42,7 @@ class Tiles extends Component {
   }
   render() {
     return(
-        <div class="tile is-ancestor">
+        <div className="tile is-ancestor">
             {this.renderTile(0)}
             {this.renderTile(1)}
             {this.renderTile(2)}
