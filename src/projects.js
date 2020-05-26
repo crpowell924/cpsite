@@ -10,7 +10,11 @@ import data from "./data.json"
 import blockx from "./assets/blockx.png"
 import buddyup from "./assets/buddyup.png"
 import fr from "./assets/frimage.png"
+import tutorial from './assets/tutorial.mov'
+import buddyupvideo from './assets/BuddyUpFinal.mov'
 import blocktext from './blockx.md.js'
+import buddytext from './buddyup.md'
+import elevatetext from './elevate.md'
 
 const pdata = data.Projects;
 const images = [blockx, buddyup, fr]
@@ -82,26 +86,46 @@ class BlockX extends Component {
               .use(remark2react)
               .processSync(this.state.text).result
           }
+          <video src={tutorial} controls height="600" width="300" className="my-center"/>
       </div>
     )
   }
 }
 
 class BuddyUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: buddytext}
+  }
   render() {
     return (
       <div>
-        hello
+        {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(this.state.text).result
+          }
+          <video src={buddyupvideo} controls height="400" width="600" className="my-center"/>
       </div>
     );
   }
 }
 
 class Elevate extends Component {
+  constructor(props) {
+    super(props) 
+    this.state = { text: elevatetext }
+  }
   render() {
     return (
       <div>
-        hello
+         {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(this.state.text).result
+          }
       </div>
     );
   }

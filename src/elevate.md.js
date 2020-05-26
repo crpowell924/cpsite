@@ -1,0 +1,20 @@
+export default `
+# Elevate
+
+This project was a part of my internship with CapTech Consulting, and was a proof-of-concept for a simulated client. We were requested to produce a use of facial recognition for a large hospitality company to help them produce a personalized guest/customer experience. This was a pretty large undertaking for a group of interns over just three months, but thanks to lots of support from experience developers (and many cups of coffee) we produced a solution we could all be proud of.
+
+Our vision for this project was for customers to have the ability to walk into a hotel, be recognized as they are walking in, and be greeted by name by a hotel employee who is using the iPad application. Then, they could walk to the pool and be greeted again by the bartender, who might recommend a drink to them based off their stored preferences. Furthermore, if they visited one of the fast-casual dining restaurants, they wouldn’t have to stand in line or even go through a full kiosk-ordering process. They could be recognized when they approach the kiosk with the iPad application running, and see all their history to very quickly place their order. This kind of innovation and personalization would make customers feel excited, known, and welcome.
+
+The solution can be broken into three main components: The facial recognition architecture, the employee- and customer-facing iPad applications, and the database and APIs.
+
+1. Facial Recognition
+> The facial recognition project was a hybrid cloud/edge application which took advantage of Google’s Edge TPU Boards. We leveraged the edge device’s Tensorflow Processing Unit (TPU) to run a live face detection on the edge. This distributed processing took the burden off of our cloud services, where the actual recognition logic would happen. To do this, we deployed a Tensorflow model to a secure EC2 Instance where a picture of a face (sent from the edge device) was converted into a mathematical representation of the face by our neural net. Then, we would compare this new model against a stored collection of previously known faces to determine if we had a match. To ensure speedy response times, we used a 99% PCA reduction to to decrease the number of computations made (by decreasing the data points involved). Additionally, rather than running a linear comparison against every stored face, we used a K-D tree to conduct a speedy nearest neighbors search. When a match was found, we pushed a notification back using Amazon SNS to the relevant device which gracefully updated to show the newly recognized customer.
+
+2. iPad Apps for employees and customers
+> The iPad applications were the main user interface on this project. Using Swift’s UIKit framework, we were able to produce a customer-facing app for the fast-casual dining restaurants for quick and easy ordering (and especially re-ordering). This included a registration process, where we asked for customer information only the first time they used the app. Here we had customers take initial photos to add to the vector stores so they could be recognized in the future. This registration process would take under a minute, and reordering could be as quick as 20 seconds. 
+>
+> The employee-facing application included an employee login, a list of guests expected to check in, a guest check-in screen, and guest history information. The app automatically pulled up a guests profile when they were recognized by the camera, so the employee could immediately greet the guest by name. 
+
+3. API and database
+> The APIs and database were the lifeline of this project. Using the Serverless framework with AWS Lambda and RDS Services, we were able to build a completely cloud-native application. We wrote a RESTful API that could read from and write to our SQL database, and we used an ORM to create abstraction between the business and data layers in the application. Before long, we had real-time data supplied to our user-facing applications as needed, which tied together the last of our functionality.
+`

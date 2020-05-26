@@ -7113,3 +7113,15 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+
+img[alt="Sphero"] {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+  margin: auto;
+}
+.my-center {
+  display: block;
+  margin: auto;
+}

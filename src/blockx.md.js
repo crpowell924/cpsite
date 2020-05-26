@@ -18,4 +18,7 @@ While there were other Sphero controller apps on the market, none of them suppor
 
 At the end of our two month project, we did not get the app a full deployment stage, but it was a capstone project during a pandemic, okay? In reality, our client had expected it to be a two-semester project, so she was really pleased with the foundation we had made -- and thanks to some future team of UNC students, I’m looking forward to seeing it hit the App store later this year.
 
+Below is the tutorial video that sums up what the BlockX UI can do. (Not pictured: the robot rolling around my floor). 
+
+(P.S. Here's the [GitHub Repository](https://github.com/elbermuniz/Accessible-Block-Coding), if you're into that.)
 `
