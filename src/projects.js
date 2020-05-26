@@ -3,10 +3,14 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+import unified from 'unified'
+import parse from 'remark-parse'
+import remark2react from 'remark-react'
 import data from "./data.json"
 import blockx from "./assets/blockx.png"
 import buddyup from "./assets/buddyup.png"
 import fr from "./assets/frimage.png"
+import blocktext from './blockx.md.js'
 
 const pdata = data.Projects;
 const images = [blockx, buddyup, fr]
@@ -64,12 +68,22 @@ class Content extends Component {
 }
 
 class BlockX extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { text: blocktext }
+
+  }
   render() {
     return (
       <div>
-        hello
+          {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(this.state.text).result
+          }
       </div>
-    );
+    )
   }
 }
 
