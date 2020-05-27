@@ -31,7 +31,7 @@ function Icon(props) {
             <a href={props.url}>
             <span className="icon is-large">
             <figure className="image is-96x96">
-            <img src={props.platform} alt="Social Media"></img>
+            <img src={props.platform} alt="Social Media" className="thumbnail"></img>
             </figure>
             </span>
             </a>

@@ -12,6 +12,9 @@ import Header from "./assets/carleeheader1.png"
 import Footer from "./footer"
 
 class App extends Component {
+  componentDidMount() {
+    document.title = "Carlee Powell Portfolio"
+  }
   render() {
     return(
       <Router>
@@ -35,10 +38,10 @@ class Navigation extends Component {
     return(
         <div className="tabs is-boxed is-centered">
         <ul className="header">
-            <li><NavLink to="/">home</NavLink></li>
-            <li><NavLink to="/projects">work</NavLink></li>
-            <li><NavLink to="/play">play</NavLink></li>
-            <li><NavLink to="/contact">contact</NavLink></li>
+            <li><NavLink to="/" className="has-text-link">home</NavLink></li>
+            <li><NavLink to="/projects" className="has-text-link">work</NavLink></li>
+            {/* <li><NavLink to="/play" className="has-text-link">play</NavLink></li> */}
+            <li><NavLink to="/contact" className="has-text-link">contact</NavLink></li>
         </ul>
         </div> 
     );

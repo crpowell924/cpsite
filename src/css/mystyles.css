@@ -7125,3 +7125,12 @@ img[alt="Sphero"] {
   display: block;
   margin: auto;
 }
+.thumbnail:hover {
+  position:relative;
+  top:-5px;
+  left:-5px;
+  width:200px;
+  height:auto;
+  display:block;
+  /* z-index:999; */
+}
