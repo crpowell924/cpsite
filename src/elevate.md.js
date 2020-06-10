@@ -1,7 +1,7 @@
 export default `
 # Elevate
 
-This project was a part of my internship with CapTech Consulting, and was a proof-of-concept for a simulated client. We were requested to produce a use of facial recognition for a large hospitality company to help them produce a personalized guest/customer experience. This was a pretty large undertaking for a group of interns over just three months, but thanks to lots of support from experience developers (and many cups of coffee) we produced a solution we could all be proud of.
+This project was a part of my internship with CapTech Consulting, and was a proof-of-concept for a simulated client. We were requested to produce a use of facial recognition for a large hospitality company to help them produce a personalized guest/customer experience. This was a pretty large undertaking for a group of interns over just three months, but thanks to lots of support from experienced developers (and many cups of coffee) we produced a solution we could all be proud of.
 
 Our vision for this project was for customers to have the ability to walk into a hotel, be recognized as they are walking in, and be greeted by name by a hotel employee who is using the iPad application. Then, they could walk to the pool and be greeted again by the bartender, who might recommend a drink to them based off their stored preferences. Furthermore, if they visited one of the fast-casual dining restaurants, they wouldn’t have to stand in line or even go through a full kiosk-ordering process. They could be recognized when they approach the kiosk with the iPad application running, and see all their history to very quickly place their order. This kind of innovation and personalization would make customers feel excited, known, and welcome.
 

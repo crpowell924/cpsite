@@ -40,7 +40,7 @@ class Navigation extends Component {
         <ul className="header">
             <li><NavLink to="/" className="has-text-link">home</NavLink></li>
             <li><NavLink to="/projects" className="has-text-link">work</NavLink></li>
-            {/* <li><NavLink to="/play" className="has-text-link">play</NavLink></li> */}
+            <li><NavLink to="/play" className="has-text-link">play</NavLink></li>
             <li><NavLink to="/contact" className="has-text-link">contact</NavLink></li>
         </ul>
         </div> 
